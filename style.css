@@ -1,0 +1,12 @@
+.imagem_mosquito{
+    height: 70px;
+    width: 70px;
+    
+   
+}
+.inverterDireita{
+    transform: scaleX(1);
+}
+.inverterEsquerda{
+    transform: scaleX(-1);
+}
