@@ -10,3 +10,33 @@
 .inverterEsquerda{
     transform: scaleX(-1);
 }
+
+/*
+==============================
+=======BACKGROUND=============
+==============================
+
+*/
+
+body{
+    background: url(/imagens/bg.jpg) no-repeat ;
+   
+    
+}
+
+/*barrinha de vida e tempo*/
+
+.conteiner-vida-tempo{
+    background-color: antiquewhite;
+    position: absolute;
+    padding: 10px 25px 10px 25px;
+
+    left: 0px;
+    bottom: 0px;
+
+    opacity: 0.7;
+}
+#vidas{
+    float: left;
+}
+
