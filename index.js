@@ -1,9 +1,10 @@
 //INDENTIFICAÇÃO DA LARGURA E ALTURA DA PAGINA
 //==============================================
 
-let altura = 0  
+let altura = 0 
 let largura = 0
-
+let vidas = 1
+let pontos = 0
 function ajusteTamanhoTela(){
     altura = window.innerHeight
     largura = window.innerWidth
@@ -20,6 +21,16 @@ function posicaoRandomica(){
     //ele basicamente pega o elemento anterior, e apaga para criar um novo, isso se o elemento existir
     if(document.getElementById('mosquito')){
         document.getElementById('mosquito').remove()
+
+            //controle dos pontos de vidas
+        document.getElementById('v' + vidas).src = '/imagens/coracao_vazio.png'
+        vidas++
+        if(vidas > 3){
+           
+
+            window.location.href = 'game-over.html'
+
+        }
     }
     //============================
     //POSIÇÃO DA IMAGEM NA TELA ===============================
@@ -41,7 +52,7 @@ mosquito.id = 'mosquito'
 mosquito.style.position = 'absolute'
 mosquito.style.left = posicaoX + 'px'
 mosquito.style.top = posicaoY + 'px'
-mosquito.style.back
+
 
 //tamanho randomico do elemento
 let tamanhoA = Math.floor(Math.random() * 150)
@@ -54,8 +65,10 @@ mosquito.style.width = tamanhoA + 'px'
 
 mosquito.onclick = function(){
     this.remove()
-}
+    pontos ++
 
+}
+console.log(pontos)
 // adicionando o elemento dentro do body
 
 document.body.appendChild(mosquito)

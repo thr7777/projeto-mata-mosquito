@@ -1,0 +1,27 @@
+/*===========================================
+GAME OVER
+================================================
+*/
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.conteiner-game-over{
+    background: #000;
+
+    width: 50%;
+    height: 200px;
+
+    color: antiquewhite;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
