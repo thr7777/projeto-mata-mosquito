@@ -20,7 +20,7 @@
 
 body{
     background: url(/imagens/bg.jpg) no-repeat ;
-   
+    
 
     
 }
@@ -37,9 +37,37 @@ body{
 
     opacity: 0.7;
 }
+/*estilizacao do tempo*/
+#tempo{
+    font-family: sans-serif;
+    font-weight: bold;
+}
 #vidas{
     float: left;
 }
+
+/*pagina do game over*/
+#body-game-over .conteiner-game-over{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#body-game-over .conteiner-game-over #botao-reiniciar{
+    color: #fff;
+    background-color: #000;
+    border: none;
+    padding: 10px;
+
+    cursor: pointer;
+}
+#body-game-over .conteiner-game-over #botao-reiniciar:hover{
+
+    background-color: rgb(23, 23, 23);
+    
+}
+
+
 
 
 

@@ -35,7 +35,7 @@ function posicaoRandomica(){
     //============================
     //POSIÇÃO DA IMAGEM NA TELA ===============================
     //=========================================================
-let posicaoX = Math.floor(Math.random() * largura) - 150 // atribuir um menos 90 para que a imagem nao saia da tela
+let posicaoX = Math.floor(Math.random() * largura) - 150 // atribuir um menos 150 para que a imagem nao saia da tela
 let posicaoY = Math.floor(Math.random() * altura) - 150
 // caso o elemento seja menor que 0 ele vai receber 0, se nao, ele recebe ele mesmo
 //isso serve para que o mosquito ao receber uma posição negativa, o mosquito nao desapareça
@@ -100,4 +100,21 @@ function ladoAleatorio(){
     }
 }
 
+
+//cronometro
+let tempo = 60
+setInterval(
+    function() {
+        document.getElementById('tempo').innerHTML = "tempo :" + tempo
+
+        console.log(tempo)
+        tempo -= 1
+        
+
+        if(tempo == 0){
+          window.location.href = 'parabens.html' 
+        
+        }
+    }, 1000
+)
 
