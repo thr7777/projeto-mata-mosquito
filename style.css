@@ -4,6 +4,10 @@
     
    
 }
+/*cursor*/
+html{
+    cursor: url(/imagens/mata_mosca.png) 30 30, auto ;
+}
 .inverterDireita{
     transform: scaleX(1);
 }
@@ -66,6 +70,11 @@ body{
     background-color: rgb(23, 23, 23);
     
 }
+
+/*pagina inicial*/
+
+
+
 
 
 

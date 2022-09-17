@@ -11,11 +11,35 @@ function ajusteTamanhoTela(){
     
 }
 
+
+
 ajusteTamanhoTela()
+
+let dificuldade = window.location.search
+dificuldade = dificuldade.replace('?', '')
+
+
+function dificuldadeJogo(){
+    let tempoDificuldade = 1500
+    if(dificuldade == 'facil'){
+        return tempoDificuldade = 1500
+    }
+    else if(dificuldade == 'dificil'){
+        return tempoDificuldade = 1000
+    }
+    else if(dificuldade == 'impossivel'){
+       return tempoDificuldade = 750
+    }
+    
+}
+
+
+
 
 //===============================================
 // POSIÇÃO RANDOMICA
 
+    
 function posicaoRandomica(){
     //apagar elemento anterior
     //ele basicamente pega o elemento anterior, e apaga para criar um novo, isso se o elemento existir
@@ -77,10 +101,13 @@ document.body.appendChild(mosquito)
 
 mosquito.className = ladoAleatorio()
 }
+
+
 setInterval(function ()
 {
     posicaoRandomica()
-}, 2000)
+}, dificuldadeJogo())
+
 // setInterval(function(){
     //funcao
 //}, 100)
@@ -102,7 +129,7 @@ function ladoAleatorio(){
 
 
 //cronometro
-let tempo = 60
+let tempo = 30
 setInterval(
     function() {
         document.getElementById('tempo').innerHTML = "tempo :" + tempo

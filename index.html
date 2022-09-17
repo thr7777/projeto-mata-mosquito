@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/pag-inicial.css">
+    <title>Document</title>
+</head>
+<body id="pagina-inicial">
+    <div class="conteiner-pagina-inicial">
+        <img src="/imagens/game.png" alt="">
+    <select id="dificuldade">
+        <option value="">Escolher dificuldade</option>
+        <option value="facil">Facil</option>
+        <option value="dificil">
+            Dificil
+        </option>
+        <option value="impossivel">
+            Impossivel
+        </option>
+    </select>
+    <button onclick="iniciarPartida()">Iniciar partida</button>
+</div>
+    <script>
+        function iniciarPartida(){
+
+            if(document.getElementById('dificuldade').value == ''){
+                alert('Escolha uma dificuldade')
+            }
+            else{
+
+                window.location.href = 'app.html?' + document.getElementById('dificuldade').value
+               
+            }
+
+            
+        }
+    </script>
+   
+</body>
+</html>
